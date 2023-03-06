@@ -39,6 +39,7 @@ https://jestjs.io/docs/ru/bypassing-module-mocks
 _react testing library_
 
 https://testing-library.com/docs/react-testing-library/example-intro
+
 https://www.leighhalliday.com/introduction-react-testing-library
 
 **Условия сдачи практики:**
