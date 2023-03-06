@@ -1,0 +1,20 @@
+.product-card {
+    width: 50vw;
+    height: 10vh;
+
+    border-radius: 10px;
+    padding: 20px;
+
+    border: 1px solid black;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 5px;
+}
+
+.product-card__image {
+    max-height: 85%;
+}

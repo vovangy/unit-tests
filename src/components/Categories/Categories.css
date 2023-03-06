@@ -1,0 +1,28 @@
+.categories {
+    width: 100%;
+
+    padding: 20px 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+}
+
+.categories__badge {
+    width: 120px;
+
+    padding: 10px 5px;
+    border: 1px solid black;
+
+    cursor: pointer;
+    text-align: center;
+
+    user-select: none;
+    border-radius: 10px;
+}
+
+.categories__badge_selected {
+    font-weight: bold;
+}
