@@ -5,6 +5,9 @@
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --primary-color: #007FFF;
+  --secondary-color: #3E5060;
 }
 
 code {

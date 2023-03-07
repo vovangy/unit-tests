@@ -15,11 +15,11 @@ export const ProductCard: FC<Product> = ({
     return (
         <div className="product-card">
             <div className="product-card__text">
-                <div className="product-card__name">{name}</div>
+                <h2 className="product-card__name">{name}</h2>
                 <div className="product-card__description">{description}</div>
-                <div className="product-card__price">
+                <h1 className="product-card__price">
                     {getPrice(price, priceSymbol)}
-                </div>
+                </h1>
                 <div className="product-card__category">{category}</div>
             </div>
             {imgUrl && (

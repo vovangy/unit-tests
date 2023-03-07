@@ -4,6 +4,8 @@ import { render, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { SortButton } from './SortButton';
 
+afterEach(jest.clearAllMocks);
+
 describe('Button render', () => {
     it('should contain sort text', () => {
         const onSortButtonClick = jest.fn();

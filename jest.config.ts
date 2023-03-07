@@ -14,9 +14,9 @@ export default {
         '\\.(css)$': 'identity-obj-proxy',
     },
     collectCoverageFrom: [
-        'src/components/*.{js,jsx,ts,tsx}',
-        'src/pages/*.{js,jsx,ts,tsx}',
-        'src/utils/*.ts',
+        'src/components/**/*.tsx',
+        'src/pages/**/*.tsx',
+        'src/utils/**/*.ts',
     ],
     coverageThreshold: {
         global: {

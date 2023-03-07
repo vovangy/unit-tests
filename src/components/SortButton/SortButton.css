@@ -1,5 +1,13 @@
 .sort-button {
-    width: 16vw;
+    width: 14vw;
 
-    padding: 4px;
+    padding: 10px 5px;
+
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 10px;
+    background-color: white;
+
+    cursor: pointer;
+    user-select: none;
 }

@@ -1,6 +1,4 @@
 .categories {
-    width: 100%;
-
     padding: 20px 10px;
 
     display: flex;
@@ -14,7 +12,8 @@
     width: 120px;
 
     padding: 10px 5px;
-    border: 1px solid black;
+    border: 1px solid ;
+    color: var(--primary-color);
 
     cursor: pointer;
     text-align: center;
@@ -24,5 +23,6 @@
 }
 
 .categories__badge_selected {
-    font-weight: bold;
+    background-color: var(--primary-color);
+    color: white;
 }
