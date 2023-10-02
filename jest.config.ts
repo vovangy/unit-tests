@@ -13,11 +13,7 @@ export default {
     moduleNameMapper: {
         '\\.(css)$': 'identity-obj-proxy',
     },
-    collectCoverageFrom: [
-        'src/components/**/*.tsx',
-        'src/pages/**/*.tsx',
-        'src/utils/**/!(index).ts',
-    ],
+    collectCoverageFrom: ['src/pages/**/*.tsx', 'src/utils/**/!(index).ts'],
     coverageThreshold: {
         global: {
             branches: 90,

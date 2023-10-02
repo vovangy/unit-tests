@@ -1,15 +1,10 @@
 import React, { useState } from 'react';
 
-import type { Category, SortBy } from '../../types';
+import type { Category } from '../../types';
 
 import { useCurrentTime, useProducts } from '../../hooks';
-import { Categories, ProductCard, SortButton } from '../../components';
-import {
-    applyCategories,
-    updateCategories,
-    getNextSortBy,
-    productComparator,
-} from '../../utils';
+import { Categories, ProductCard } from '../../components';
+import { applyCategories, updateCategories } from '../../utils';
 
 import './MainPage.css';
 
@@ -20,16 +15,10 @@ export const MainPage = () => {
     const [selectedCategories, setSelectedCategories] = useState<Category[]>(
         []
     );
-    const [sortBy, setSortBy] = useState<SortBy>('по умолчанию');
-
     const onCategoryClick = (clickedCategory: Category) =>
         setSelectedCategories(
             updateCategories(selectedCategories, clickedCategory)
         );
-
-    const onSortButtonClick = () => setSortBy(getNextSortBy(sortBy));
-
-    products.sort(productComparator(sortBy));
 
     return (
         <div className="main-page">
@@ -39,10 +28,6 @@ export const MainPage = () => {
                 <Categories
                     selectedCategories={selectedCategories}
                     onCategoryClick={onCategoryClick}
-                />
-                <SortButton
-                    currentSort={sortBy}
-                    onSortButtonClick={onSortButtonClick}
                 />
             </div>
             {applyCategories(products, selectedCategories).map((product) => (

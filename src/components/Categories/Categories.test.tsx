@@ -34,8 +34,8 @@ describe('Categories test', () => {
             />
         );
 
-        expect(onCategoryClick).not.toHaveBeenCalled();
+        expect(onCategoryClick).toHaveBeenCalledTimes(0);
         fireEvent.click(rendered.getByText('Одежда'));
-        expect(onCategoryClick).toHaveBeenCalled();
+        expect(onCategoryClick).toHaveBeenCalledTimes(1);
     });
 });
