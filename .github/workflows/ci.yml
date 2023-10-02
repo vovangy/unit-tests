@@ -13,6 +13,12 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '16.x'
-      - run: npm ci
-      - run: npm run lint
-      - run: npm test
+      - name: Install deps
+        working-directory: ./frontend
+        run: npm ci
+      - name: Linting
+        working-directory: ./frontend
+        run: npm run lint
+      - name: Testing
+        working-directory: ./frontend
+        run: npm test
