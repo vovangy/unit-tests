@@ -2,6 +2,10 @@ name: Units CI
 
 on: [push, pull_request]
 
+stages:
+  - setup
+  - test
+
 jobs:
   test:
     name: Unit-Tests QA
@@ -24,9 +28,8 @@ jobs:
         run: npm test
 
   testback:
-    stages:
-      - setup
-      - test
+    name: Unit-Tests QA
+    runs-on: ubuntu-latest
 
     variables:
       PYTHON_VERSION: "3.11"  # Укажите нужную версию Python
