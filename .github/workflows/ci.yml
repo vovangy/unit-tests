@@ -22,3 +22,28 @@ jobs:
       - name: Testing
         working-directory: ./frontend
         run: npm test
+
+
+stages:
+  - setup
+  - test
+
+variables:
+  PYTHON_VERSION: "3.11"  # Укажите нужную версию Python
+
+before_script:
+  - apt-get update -qy
+  - apt-get install -y python${PYTHON_VERSION} python${PYTHON_VERSION}-pip
+
+setup:
+  stage: setup
+  script:
+    - python${PYTHON_VERSION} --version
+    - pip${PYTHON_VERSION} install coverage
+
+test:
+  stage: test
+  working-directory: ./backend
+  script:
+    - coverage run -m unittest src/test_calculator.py
+    - coverage report -m
