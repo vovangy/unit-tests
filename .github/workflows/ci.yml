@@ -42,7 +42,7 @@ jobs:
         run: python3.11 -m pip install coverage
 
       - name: Test Backend
-        working-directory: ./backend
+        working-directory: /backend
         run: |
           coverage run -m unittest src/test_calculator.py
           coverage report -m
