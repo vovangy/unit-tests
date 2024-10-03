@@ -5,12 +5,12 @@
 **Установить проект:**
 
 - форкаем репозиторий
-- клонируем и переходим в папку проекта `cd units-spring-2024`
+- клонируем и переходим в папку проекта `cd units-autumn-2024`
 - проверяем версию unittest и coverage `unittest -v`, `coverage -v`
 
 **Запустить тесты:**
 
-- прогон тестов `python3.11 -m unittest test_calculator.py`
+- прогон тестов `python3.10 -m unittest test_calculator.py`
 - запустить тесты с coverage`coverage run -m unittest test_calculator.py`
 - открыть coverage отчет с покрытием `coverage report`
 

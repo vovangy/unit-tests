@@ -3,7 +3,7 @@ name: Units CI
 on: [push, pull_request]
 
 jobs:
-  test:
+  test-frontend:
     name: Unit-Tests QA (Frontend)
     runs-on: ubuntu-latest
 
@@ -28,7 +28,7 @@ jobs:
         working-directory: ./frontend
         run: npm test
 
-  testback:
+  test-backend:
     name: Unit-Tests QA (Backend)
     runs-on: ubuntu-latest
 
